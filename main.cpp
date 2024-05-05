@@ -34,14 +34,13 @@ static void dencryptText(const u16string& input, u16string& output, const bool e
 int main(int argc, char** argv) {
 	char doencrypt = *(argv[1]);
 	u16string input;
+	u16string output;
 
 	for (int i = 2; i < argc; i++) {
 		unsigned int x = atoi(argv[i]);
-		input += (char)x;
-		cout << x << ':' << (char)x << ':' << std::bitset<8*sizeof(x)>(x) << endl;
+		input += (char16_t)x;
+		cout << x << ':' << (char16_t)x << endl;
 	}
-
-	u16string output;
 
 	dencryptText(input, output, doencrypt == '1');
 
