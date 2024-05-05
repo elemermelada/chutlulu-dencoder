@@ -1,10 +1,12 @@
 <?php
-$str = "ABC";
+$encrypt = "1";
+$command = "./a.out ". $encrypt;
 
+$str = "ABC";
 foreach (mb_str_split($str) as $ch) {
-    echo mb_ord($ch);
+    $command .= mb_ord($ch) . " ";
 } 
 
 $out = Array();
-exec("./a.out 1 65 66 67", $out);
+exec($command, $out);
 var_dump($out);
