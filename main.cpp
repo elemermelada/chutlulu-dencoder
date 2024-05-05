@@ -32,8 +32,8 @@ static void dencryptText(const u16string& input, u16string& output, const bool e
 }
 
 int main(int argc, char** argv) {
-	char doencrypt = '1';// *(argv[1]);
-	u16string input = u"Test string";//argv[2]);
+	char doencrypt = *(argv[1]);
+	u16string input{argv[2]};
 	u16string output;
 
 	dencryptText(input, output, doencrypt == '1');
