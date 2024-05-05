@@ -1,7 +1,7 @@
 <?php
 $str = "ABC";
 
-foreach ($str as $ch) {
+foreach (mb_str_split($str) as $ch) {
     echo mb_ord($ch);
 } 
 
