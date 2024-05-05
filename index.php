@@ -1,5 +1,5 @@
 <?php
-$str = "ABC"
+$str = "ABC";
 
 foreach ($str as $ch) {
     echo mb_ord($ch);
