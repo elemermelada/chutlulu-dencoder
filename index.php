@@ -1,6 +1,8 @@
 <?php
 $encrypt = $_GET["mode"];
-$str = $_POST["input"];
+$content = file_get_contents("php://input");
+$decoded = json_decode($content, true);
+$str = $decoded["input"];
 
 $command = "./a.out ". $encrypt . " ";
 foreach (mb_str_split($str) as $ch) {
