@@ -9,4 +9,9 @@ foreach (mb_str_split($str) as $ch) {
 
 $out = Array();
 exec($command, $out);
-var_dump($out);
+
+$result = "";
+foreach ($out as $int) {
+    $result .= mb_chr($int);
+}
+echo $result;
