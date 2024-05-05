@@ -3,6 +3,7 @@
 #define _USE_MATH_DEFINES
 #include "math.h"
 #include <cstdlib>
+#include <bitset>
 
 using namespace std;
 
@@ -37,7 +38,7 @@ int main(int argc, char** argv) {
 	for (int i = 2; i < argc; i++) {
 		unsigned int x = atoi(argv[i]);
 		input += (char)x;
-		cout << x << ':' << (char)x;
+		cout << x << ':' << (char)x << ':' << std::bitset<8*sizeof(x)>(x) << endl;
 	}
 
 	u16string output;
