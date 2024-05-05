@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
 	for (int i = 2; i < argc; i++) {
 		unsigned int x = atoi(argv[i]);
 		input += (char16_t)x;
-		cout << x << ':' << (char16_t)x << endl;
+		cout << x << ':' << input << endl;
 	}
 
 	dencryptText(input, output, doencrypt == '1');
