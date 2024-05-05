@@ -7,8 +7,7 @@
 
 using namespace std;
 
-std::wstring_convert<std::codecvt<char16_t, char, std::mbstate_t>, char16_t> convert;
-u16string chutlulu = convert.from_bytes(u8"chutlulu");
+u16string chutlulu = u"chutlulu";
 
 static wchar_t dencryptChar(const char16_t charin, const int length, const int i, const bool encrypt = true) {
 	double arg1 = cos(((length - (i + 1)) * M_PI));
@@ -34,7 +33,7 @@ static void dencryptText(const u16string& input, u16string& output, const bool e
 
 int main(int argc, char** argv) {
 	char doencrypt = '1';// *(argv[1]);
-	u16string input = convert.from_bytes(u8"Test string");//argv[2]);
+	u16string input = u"Test string";//argv[2]);
 	u16string output;
 
 	dencryptText(input, output, doencrypt == '1');
