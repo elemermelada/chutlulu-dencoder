@@ -16,9 +16,9 @@ static char16_t dencryptChar(const char16_t charin, const int length, const int 
 
 	int result = (int)charin;
 	if (encrypt)
-		result += (int)((arg1 * 3 + arg2 + arg3));
-	else
 		result -= (int)((arg1 * 3 + arg2 + arg3));
+	else
+		result += (int)((arg1 * 3 + arg2 + arg3));
 
 	result = result % 1033;
 	if (result < 0) result += 1033;
