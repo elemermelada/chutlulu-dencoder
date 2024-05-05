@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
 	u16string input;
 
 	for (int i = 2; i < argc; i++) {
-		int x = atoi(argv[i]);
+		unsigned int x = atoi(argv[i]);
 		input += (char)x;
 		cout << x << ':' << (char)x;
 	}
