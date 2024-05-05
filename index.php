@@ -1,6 +1,6 @@
 <?php
 $encrypt = $_GET["mode"];
-$str = $_GET["input"];
+$str = $_POST["input"];
 
 $command = "./a.out ". $encrypt . " ";
 foreach (mb_str_split($str) as $ch) {
