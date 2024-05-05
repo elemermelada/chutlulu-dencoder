@@ -1,7 +1,8 @@
-#include "iostream"
+﻿#include "iostream"
 #include "cmath"
 #define _USE_MATH_DEFINES
 #include "math.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -31,7 +32,14 @@ static void dencryptText(const u16string& input, u16string& output, const bool e
 
 int main(int argc, char** argv) {
 	char doencrypt = *(argv[1]);
-	u16string input{argv[2]};
+	u16string input;
+
+	for (int i = 2; i < argc; i++) {
+		int x = atoi(argv[i]);
+		input += (char16_t)x;
+		cout << x << ':' << (char16_t)x <<
+	}
+
 	u16string output;
 
 	dencryptText(input, output, doencrypt == '1');
